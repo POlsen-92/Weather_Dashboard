@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header><h1 class="display-4 text-center py-3">Weather Dashboard</h1></header>
+    <main class="d-flex min-vh-100 w-95">
+        <section id="searchCity" class="col-3 p-3">
+            <h2 class="row">Search for a City:</h2>
+            <input type="text" id="searchbar" class="w-100"> <!-- Upon typing a drop down appears -->
+            <button type="submit" class="w-100" id=subbtn>Search</button> <!-- Can either search for a city -->
+            <hr>
+            <div id="buttons" class="row">
+                <button id="ausbtn">Austin</button> <!--Or click on the button -->
+                <button id="chibtn">Chicago</button> <!--Once button is clicked the right part of -->
+                <button id="nybtn">New York</button> <!-- the screen fills in with information -->
+                <button id="orlbtn">Orlando</button> <!--about the cities -->
+                <button id="sfbtn">San Francisco</button>
+                <button id="seabtn">Seattle</button>
+                <button id="denbtn">Denver</button>
+                <button id="atlbtn">Atlanta</button>
+            </div>
+        </section>
+        <section id="city-forecast" class="col-9">
+            <section id="cities" class="">
+                <div>
+                    <h3>City</h3><!-- Going to have Cities Object input here with today's date -->
+                    <p>Temp:</p> <!-- Temp input -->
+                    <p>Wind:</p> <!-- Wind input -->
+                    <p>Humidity:</p> <!-- Humidity input -->
+                    <p>UV Index:</p> <!-- UV Index input -->
+                </div>
+            </section>
+            <section id="forecast" class="d-flex row p-2">
+                <h4 class="row w-100 mx-2">5-Day Forcast:</h4>
+                <div id="tomorrow" class="card col-2"> 
+                    <h5>Date</h5><!-- Tomorrow -->
+                    <span>🌤️</span> <!-- weather icon -->
+                    <p>Temp:</p> <!-- Temp input -->
+                    <p>Wind:</p> <!-- Wind input -->
+                    <p>Humidity:</p> <!-- Humidity input -->
+                </div>
+                <div id="2daysltr" class="card col-2"> 
+                    <h5>Date</h5><!-- Two Days Later -->
+                    <span>🌤️</span> <!-- weather icon -->
+                    <p>Temp:</p> <!-- Temp input -->
+                    <p>Wind:</p> <!-- Wind input -->
+                    <p>Humidity:</p> <!-- Humidity input -->
+                </div>
+                <div id="3daysltr" class="card col-2"> 
+                    <h5>Date</h5><!-- Three Days Later -->
+                    <span>🌤️</span> <!-- weather icon -->
+                    <p>Temp:</p> <!-- Temp input -->
+                    <p>Wind:</p> <!-- Wind input -->
+                    <p>Humidity:</p> <!-- Humidity input -->
+                </div>
+                <div id="4daysltr" class="card col-2"> 
+                    <h5>Date</h5><!-- Four Days Later -->
+                    <span>🌤️</span> <!-- weather icon -->
+                    <p>Temp:</p> <!-- Temp input -->
+                    <p>Wind:</p> <!-- Wind input -->
+                    <p>Humidity:</p> <!-- Humidity input -->
+                </div>
+                <div id="5daysltr" class="card col-2"> 
+                    <h5>Date</h5> <!-- Five Days Later -->
+                    <span>🌤️</span> <!-- weather icon -->
+                    <p>Temp:</p> <!-- Temp input -->
+                    <p>Wind:</p> <!-- Wind input -->
+                    <p>Humidity:</p> <!-- Humidity input -->
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./Assets/js/script.js"></script>
+</html>
