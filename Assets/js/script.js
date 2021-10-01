@@ -73,7 +73,7 @@ var APIkey = "b1048ffe692830f2dafbaad135f0fd00";
 //function to get city info is below
 
 function getCityInfo() {
-    var queryURL1 = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIkey;
+    var queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIkey;
     fetch(queryURL1)//first call is going to be getting latitude and longitude of the city
     .then(function (response) {
         return response.json();
