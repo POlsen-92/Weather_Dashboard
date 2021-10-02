@@ -62,7 +62,14 @@ button{
 }
 
 #city-forecast {
+    
+}
 
+p {
+    display: inline-block;
+    width:auto;
+    flex-direction: column;
+    background-color: aqua;
 }
 
 #cities {
@@ -75,6 +82,10 @@ button{
     padding: 10px;
     justify-content: space-between;
 
+}
+
+#forecast div div {
+    margin: 5px 0;
 }
 
 h4 {

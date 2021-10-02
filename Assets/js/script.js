@@ -1,5 +1,6 @@
 var searchCityEl = document.querySelector('#searchCity')
 var cityInputEl = document.querySelector('#searchbar')
+var cityForecast = document.querySelector('#city-forecast')
 
 
 //Todays Variables
@@ -51,7 +52,7 @@ var wind5 = document.querySelector('#wind5');
 var humid5 = document.querySelector('#humid5');
 
 var city;  //Input from user
-
+cityForecast.setAttribute("style", "display: none")
 //city input
 
 var citySubmitHandler = function (event) {
@@ -60,10 +61,10 @@ var citySubmitHandler = function (event) {
     city = cityInputEl.value.trim();
     console.log(city)
     if (city) {
-      getCityInfo(city);
-  
+        getCityInfo(city);
+        cityForecast.setAttribute("style", "display: ")
     } else {
-      alert('Please enter a city');
+        alert('Please enter a city');
     }
   };
 
@@ -88,44 +89,46 @@ function getCityInfo() {
                     return response.json();
                 }) 
                 .then(function (data) {
+                    // var icon0 = data.current.weather.icon;
+                    // var imgUrl0 = "http://openweathermap.org/img/wn/" + icon0 + "@2x.png";
                 //add content to elements day0
-                    cityName.textContent = city;
+                    cityName.textContent = city.charAt(0).toUpperCase() + city.slice(1);
                     day0.textContent = moment.unix(data.current.dt).format("MM-DD-YY");
-                    icon0.textContent = data.current.weather.icon;
-                    temp0.textContent = data.current.temp;
-                    wind0.textContent = data.current.wind_speed;
-                    humid0.textContent = data.current.humidity;
-                    uv0.textContent = data.current.uvi;
+                    // icon0 = imgUrl0;
+                    temp0.textContent = "Temperature: " + data.current.temp + " Deg F";
+                    wind0.textContent = "Wind-Speed: " + data.current.wind_speed + "mph";
+                    humid0.textContent = "Humidity: " + data.current.humidity + "%";
+                    uv0.textContent = "UV Index: " + data.current.uvi;
                 //add content to elements day1
-                    day1.textContent = moment.unix(data.daily[0].dt).format("MM-DD-YY");
-                    icon1.textContent = data.daily[0].weather.icon;
-                    temp1.textContent = data.daily[0].temp.day;
-                    wind1.textContent = data.daily[0].wind_speed;
-                    humid1.textContent = data.daily[0].humidity;
+                    day1.textContent = moment.unix(data.daily[1].dt).format("MM-DD-YY");
+                    // icon1.textContent = data.daily[1].weather.icon;
+                    temp1.textContent = "Temp: " + data.daily[1].temp.day + "F";
+                    wind1.textContent = "Wind: " + data.daily[1].wind_speed + "mph";
+                    humid1.textContent = "Humidity: " + data.daily[1].humidity + "%";
                 //add content to elements day2
-                    day2.textContent = moment.unix(data.daily[1].dt).format("MM-DD-YY");
-                    icon2.textContent = data.daily[1].weather.icon;
-                    temp2.textContent = data.daily[1].temp.day;
-                    wind2.textContent = data.daily[1].wind_speed;
-                    humid2.textContent = data.daily[1].humidity;
+                    day2.textContent = moment.unix(data.daily[2].dt).format("MM-DD-YY");
+                    // icon2.textContent = data.daily[2].weather.icon;
+                    temp2.textContent = "Temp: " + data.daily[2].temp.day + "F";
+                    wind2.textContent = "Wind: " + data.daily[2].wind_speed + "mph";
+                    humid2.textContent = "Humidity: " + data.daily[2].humidity + "%";
                 //add content to elements day 3
-                    day3.textContent = moment.unix(data.daily[2].dt).format("MM-DD-YY");
-                    icon3.textContent = data.daily[2].weather.icon;
-                    temp3.textContent = data.daily[2].temp.day;
-                    wind3.textContent = data.daily[2].wind_speed;
-                    humid3.textContent = data.daily[2].humidity;
+                    day3.textContent = moment.unix(data.daily[3].dt).format("MM-DD-YY");
+                    // icon3.textContent = data.daily[3].weather.icon;
+                    temp3.textContent = "Temp: " + data.daily[3].temp.day + "F";
+                    wind3.textContent = "Wind: " + data.daily[3].wind_speed + "mph";
+                    humid3.textContent = "Humidity: " + data.daily[3].humidity + "%";
                 //add content to elements day 4
-                    day4.textContent = moment.unix(data.daily[3].dt).format("MM-DD-YY");
-                    icon4.textContent = data.daily[3].weather.icon;
-                    temp4.textContent = data.daily[3].temp.day;
-                    wind4.textContent = data.daily[3].wind_speed;
-                    humid4.textContent = data.daily[3].humidity;
+                    day4.textContent = moment.unix(data.daily[4].dt).format("MM-DD-YY");
+                    // icon4.textContent = data.daily[4].weather.icon;
+                    temp4.textContent = "Temp: " + data.daily[4].temp.day + "F";
+                    wind4.textContent = "Wind: " + data.daily[4].wind_speed + "mph";
+                    humid4.textContent = "Humidity: " + data.daily[4].humidity + "%";
                 //add content to elements day 5
-                    day5.textContent = moment.unix(data.daily[4].dt).format("MM-DD-YY");
-                    icon5.textContent = data.daily[4].weather.icon;
-                    temp5.textContent = data.daily[4].temp.day;
-                    wind5.textContent = data.daily[4].wind_speed;
-                    humid5.textContent = data.daily[4].humidity;
+                    day5.textContent = moment.unix(data.daily[5].dt).format("MM-DD-YY");
+                    // icon5.textContent = data.daily[5].weather.icon;
+                    temp5.textContent = "Temp: " + data.daily[5].temp.day + "F";
+                    wind5.textContent = "Wind: " + data.daily[5].wind_speed + "mph";
+                    humid5.textContent = "Humidity: " + data.daily[5].humidity + "%";
                 })
 
         })
