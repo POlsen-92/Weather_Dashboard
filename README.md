@@ -43,3 +43,21 @@ The following image shows the web application's appearance and functionality:
 
 ![The weather app includes a search option, and a five-day forecast and current weather conditions for Seattle.](./Assets/Screenshot.png)
 
+## Credits
+Built with [JavaScript](https://www.javascript.com/), [Moment](https://momentjs.com/) and [BootStrap](https://getbootstrap.com/)
+
+Deployed with GitHub
+
+Link to the Deployed Site: [Weather Dashboard](https://polsen-92.github.io/Weather_Dashboard/)
+
+## License
+
+MIT license 
+Copyright © 2020
+
+## Creator
+
+<img src="./Assets/cover_photo.jpg" width="100px"> <br>
+Paige Olsen
+[Github](https://github.com/POlsen-92) ,
+[LinkedIn](https://www.linkedin.com/in/paige-olsen-2aba9685/)
